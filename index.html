@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evaluation Pro v1.10 Lifetime – by Mohammad Shahin Hossain, LGED</title>
+<meta name="description" content="Bangladesh e-GP Tender Auto Evaluation Tool – Auto Clarification, JV Control, Finalize Responsiveness – Lifetime License – Developed by Mohammad Shahin Hossain, Surveyor, LGED – 01675350306">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#047857; --teal2:#0d9488; --teal3:#14b8a6; --mint:#ecfdf5;
+  --dark:#042f2e; --ink:#0f172a; --muted:#64748b; --bg:#f7fbf9;
+  --accent:#f59e0b; --red:#ef4444; --white:#fff;
+  --radius:18px; --shadow:0 12px 40px rgba(2,44,34,.12);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter','Noto Sans Bengali',system-ui,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7}
+a{color:var(--teal2);text-decoration:none}
+.container{max-width:1080px;margin:0 auto;padding:0 20px}
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid #d1fae5}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1080px;margin:0 auto}
+.brand{font-weight:800;color:var(--teal);font-size:16px}
+.brand span{color:var(--teal2);font-weight:600;font-size:12px;display:block}
+.nav-cta{background:linear-gradient(90deg,#059669,#0d9488);color:#fff;padding:9px 16px;border-radius:30px;font-weight:700;font-size:13px;box-shadow:0 4px 14px rgba(5,150,105,.3)}
+.hero{background:linear-gradient(160deg,#042f2e 0%, #065f46 45%, #0d9488 100%);color:#fff;padding:64px 0 48px;position:relative;overflow:hidden}
+.hero h1{font-size:34px;line-height:1.25;font-weight:800;margin-bottom:12px}
+.hero h1 .hl{color:#5eead4}
+.hero p.lead{font-size:17px;color:#ccfbf1;max-width:680px;margin-bottom:22px}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 26px}
+.badge{background:rgba(255,255,255,.12);border:1px solid rgba(94,234,212,.35);color:#a7f3d0;padding:6px 13px;border-radius:30px;font-size:12px;font-weight:600}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:12px;font-weight:700;font-size:15px;transition:.15s;cursor:pointer;border:none}
+.btn-primary{background:#10b981;color:#fff;box-shadow:0 8px 24px rgba(16,185,129,.35)}
+.btn-primary:hover{transform:translateY(-2px);filter:brightness(1.05)}
+.btn-ghost{background:rgba(255,255,255,.1);color:#ecfdf5;border:1px solid rgba(94,234,212,.4)}
+.btn-wa{background:#25D366;color:#fff}
+.hero-card{margin-top:28px;background:rgba(0,20,18,.5);border:1px solid rgba(45,212,191,.25);border-radius:16px;padding:16px 18px;font-size:13px;color:#99f6e4}
+.grid{display:grid;gap:18px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.section{padding:52px 0}
+.section h2{font-size:26px;color:var(--teal);margin-bottom:10px;font-weight:800}
+.section p.sub{color:var(--muted);margin-bottom:24px}
+.card{background:#fff;border:1px solid #d1fae5;border-radius:16px;padding:22px;box-shadow:var(--shadow)}
+.card h3{font-size:17px;color:#065f46;margin-bottom:8px}
+.card p{font-size:14px;color:#334155}
+.icon{font-size:22px;margin-bottom:8px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+.step{background:#fff;border:1px solid #a7f3d0;border-radius:14px;padding:18px}
+.step b{display:block;color:#047857;margin-bottom:4px}
+.price-box{background:linear-gradient(160deg,#042f2e,#065f46);color:#fff;border-radius:20px;padding:30px;text-align:center}
+.price-box h3{font-size:22px;color:#5eead4;margin-bottom:6px}
+.price-tag{font-size:28px;font-weight:800;margin:8px 0}
+.price-tag span{font-size:14px;font-weight:500;color:#a7f3d0}
+ul.clean{list-style:none;padding:0}
+ul.clean li{padding:7px 0;border-bottom:1px dashed #d1fae5;font-size:14px}
+ul.clean li:last-child{border:none}
+ul.clean li::before{content:"✓ ";color:#10b981;font-weight:700}
+.faq details{background:#fff;border:1px solid #d1fae5;border-radius:12px;padding:14px 16px;margin-bottom:10px}
+.faq summary{font-weight:700;color:#065f46;cursor:pointer}
+.credit-strip{background:#ecfdf5;border:1px solid #6ee7b7;border-radius:14px;padding:18px;text-align:center;margin-top:10px}
+.footer{background:#001a17;color:#99f6e4;padding:36px 0 28px;font-size:13px;margin-top:30px}
+.footer a{color:#5eead4}
+.chip{display:inline-block;background:#ecfdf5;color:#065f46;border:1px solid #a7f3d0;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:700;margin:2px}
+@media(max-width:720px){.hero h1{font-size:26px}.btn{width:100%;justify-content:center}}
+.watermark{position:fixed;bottom:12px;right:12px;background:rgba(4,47,46,.88);color:#5eead4;padding:5px 12px;border-radius:20px;font-size:11px;z-index:999;border:1px solid #0d9488;letter-spacing:.2px;box-shadow:0 4px 12px rgba(0,0,0,0.2)}
+</style>
+</head>
+<body>
+
+<div class="watermark">⚡ Developed by Mohammad Shahin Hossain, LGED</div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">Evaluation Pro <span>v1.10 Lifetime • Shahin LGED</span></div>
+    <div>
+      <a href="#download" class="nav-cta">Download Pro</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <div class="badges">
+      <span class="badge">✅ LGED Tested</span>
+      <span class="badge">⚡ Lifetime License</span>
+      <span class="badge">🇧🇩 Made in Bangladesh</span>
+      <span class="badge">🛡️ Single PC Secure</span>
+    </div>
+    <h1>e-GP Tender Evaluation<br><span class="hl">ঘণ্টার কাজ – এখন মিনিটে</span></h1>
+    <p class="lead" style="font-size:18px;line-height:1.6;margin-bottom:24px;">
+      <b>ঘণ্টার পর ঘণ্টা টেন্ডার ইভ্যালুয়েশনের একঘেয়েমি এখন অতীত!</b><br>
+      <span style="color:#a7f3d0;font-weight:600;">Evaluation Pro v1.10</span> দিয়ে মাত্র এক ক্লিকেই স্বয়ংক্রিয়ভাবে টেন্ডার মূল্যায়ন, ক্লারিফিকেশন এবং রেসপন্সিভনেস ফাইনাল করুন চোখের পলকে।
+    </p>
+    <div class="btn-row" id="download">
+      <a class="btn btn-primary" href="./download/evaluation-pro.user.js" download>⬇️ Download Pro v1.10</a>
+      <a class="btn btn-ghost" href="./docs/User-Manual-EN.pdf" target="_blank">📄 User Manual (PDF)</a>
+      <a class="btn btn-wa" href="https://wa.me/8801675350306?text=Salam%20Shahin%20bhai%2C%20Evaluation%20Pro%20v1.10%20lagbe" target="_blank">💬 WhatsApp Order</a>
+    </div>
+
+    <div class="hero-card" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-around;gap:16px;padding:18px 24px;background:rgba(4,47,46,0.75);border:1px solid rgba(45,212,191,0.35);box-shadow:0 8px 24px rgba(0,0,0,0.25);">
+      <div style="display:flex;align-items:center;gap:12px;">
+        <span style="font-size:26px;">📥</span>
+        <div>
+          <div style="font-size:20px;font-weight:800;color:#5eead4;line-height:1.1;">২৮০+</div>
+          <div style="font-size:12px;color:#ccfbf1;">মোট ডাউনলোড</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <span style="font-size:26px;">👑</span>
+        <div>
+          <div style="font-size:20px;font-weight:800;color:#34d399;line-height:1.1;">১৩৫+</div>
+          <div style="font-size:12px;color:#ccfbf1;">সক্রিয় লাইসেন্স (LGED ও ঠিকাদার)</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;">
+        <span style="font-size:26px;">⭐️</span>
+        <div>
+          <div style="font-size:20px;font-weight:800;color:#fbbcf2;line-height:1.1;">১০০%</div>
+          <div style="font-size:12px;color:#ccfbf1;">বিশ্বস্ত ও সন্তুষ্ট ব্যবহারকারী</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>কি কি করবে – Auto Features</h2>
+    <p class="sub">eprocure.gov.bd এ ১০০% compatible – June 2025 tested</p>
+    <div class="grid g3">
+      <div class="card"><div class="icon">⚡</div><h3>Auto Evaluate Tenderer</h3><p>List page থেকে স্বয়ংক্রিয়ভাবে "Evaluate Tenderer" খুলে, ক্রমানুসারে প্রসেস করে। Max 200 tender/run।</p></div>
+      <div class="card"><div class="icon">📝</div><h3>Auto Clarification</h3><p>Evaluation পেজে Reason = "Accepted", Technically Qualify = ✓ – Auto fill + Auto Submit – random human delay 2.4–4.5s।</p></div>
+      <div class="card"><div class="icon">🤝</div><h3>JV Rows → No – 1 Click</h3><p>JVCA Partner / Joint Venture Agreement / Subcontractor – সব select box Auto "No"।</p></div>
+      <div class="card"><div class="icon">✅</div><h3>Finalize Responsiveness</h3><p>"Technically Responsive" radio auto select + Reason "Responsive" + Auto Submit + confirm bypass।</p></div>
+      <div class="card"><div class="icon">📊</div><h3>Live Pro Panel</h3><p>Dark premium dock – Status, Tender count, Form count, Live log, Pause/Resume, Minimize।</p></div>
+      <div class="card"><div class="icon">🔒</div><h3>Lifetime License – 1 PC</h3><p>Device fingerprint binding – SHAHIN-XXXX-XXXX-XXXX – Copy-paste প্রতিরোধ – Trial 2 uses।</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#f0fdfa">
+  <div class="container">
+    <h2>৩ ধাপে Install – ৫ মিনিট</h2>
+    <div class="steps">
+      <div class="step"><b>① Install Tampermonkey</b>Chrome / Firefox এ Tampermonkey extension add করুন – ১ বার।<br><a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank" style="font-size:12px">→ Chrome Web Store</a></div>
+      <div class="step"><b>② Install Script</b>নিচের Download বাটন → .user.js ফাইল → Tampermonkey → Install → Enabled সবুজ।</div>
+      <div class="step"><b>③ Activate License</b>Evaluation Pro খুললেই Device ID দেখাবে – যেমন <code>SHAHIN-XXXX-XXXX-XXXX</code> → WhatsApp করুন <b>01675350306</b> → ৫ মিনিটে Lifetime Key → Activate → Done।</div>
+    </div>
+    <div style="text-align:center;margin-top:22px">
+      <a class="btn btn-primary" href="./download/evaluation-pro.user.js" download>⬇️ Download Evaluation Pro v1.10</a>
+      <a class="btn" style="background:#fff;border:1px solid #0d9488;color:#047857" href="./docs/User-Manual-EN.pdf" target="_blank">📘 Full Manual PDF</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start">
+    <div>
+      <h2>License & Pricing</h2>
+      <ul class="clean">
+        <li>Lifetime License – একবার কিনুন, আজীবন</li>
+        <li>Single PC Binding – 1 Computer = 1 License</li>
+        <li>No monthly fee – No yearly renewal – No hidden charge</li>
+        <li>Free updates – v1.x Lifetime included</li>
+        <li>Free re-activation – 1x PC change included</li>
+        <li>Direct developer support – WhatsApp / TeamViewer</li>
+        <li>Bangla + English User Manual – with real screenshots</li>
+        <li>Commercial – Obfuscated secure build</li>
+      </ul>
+      <p style="margin-top:12px;font-size:13px;color:#64748b">LGED সহকর্মীদের জন্য বিশেষ ফ্রি লাইসেন্স প্রোগ্রাম চলছে – LGED ID সহ যোগাযোগ করুন।</p>
+    </div>
+    <div class="price-box">
+      <div class="chip" style="background:#065f46;color:#a7f3d0;border-color:#0d9488">LIFETIME</div>
+      <h3>Evaluation Pro v1.10</h3>
+      <div class="price-tag">৳ আলোচনা সাপেক্ষে<br><span>Single-PC • Lifetime • VAT inclusive</span></div>
+      <p style="font-size:13px;color:#a7f3d0;margin:10px 0">একাধিক PC / প্রতিষ্ঠানিক প্যাকেজে বিশেষ ডিসকাউন্ট</p>
+      <a href="https://wa.me/8801675350306?text=Bhai%2C%20Evaluation%20Pro%20v1.10%20price%20koto%3F" target="_blank" class="btn" style="background:#25D366;color:#fff;width:100%;justify-content:center;margin-top:8px">💬 WhatsApp এ দাম জানুন</a>
+      <div style="font-size:12px;margin-top:10px;color:#99f6e4">
+        bKash / Nagad / Rocket / Bank<br>
+        01675350306 – Mohammad Shahin Hossain
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section faq" style="background:#f8fafc">
+  <div class="container" style="max-width:800px">
+    <h2>সাধারণ প্রশ্ন</h2>
+    <details><summary>License কি আজীবন?</summary><div style="padding-top:8px;font-size:14px">হ্যাঁ। একবার কিনলে Lifetime – কোনো মাসিক/বাৎসরিক ফি নেই। 1 PC = 1 License।</div></details>
+    <details><summary>PC change করলে কি হবে?</summary><div style="padding-top:8px;font-size:14px">নতুন Device ID আসবে। পুরাতন + নতুন Device ID সহ 01675350306 এ জানান – ১ বার ফ্রি re-activation included।</div></details>
+    <details><summary>Update আসলে License হারাবে?</summary><div style="padding-top:8px;font-size:14px">না। v1.x এর সব আপডেটে License অটো থাকবে। Tampermonkey “Update” চাপলেই হবে – re-activate লাগবে না। কারণ SECRET_SALT ও storage key অপরিবর্তিত।<br><br><b>Auto-Update URL:</b><br><code style="font-size:11px">https://shrony25.github.io/epro/evaluation-pro.meta.js</code></div></details>
+    <details><summary>LGED দের জন্য কি ফ্রি?</summary><div style="padding-top:8px;font-size:14px">হ্যাঁ। LGED সহকর্মীদের জন্য Lifetime License সম্পূর্ণ বিনামূল্যে। Device ID পাঠালেই ফ্রি Key দেওয়া হবে। স্বেচ্ছায় চাইলে খালাছিপাড়া জামে মসজিদ, ফটিকছড়ি, চট্টগ্রাম – নির্মাণে সহায়তা করতে পারেন।</div></details>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="credit-strip">
+      <div style="font-size:14px;color:#065f46">Developed & Owned by</div>
+      <div style="font-size:20px;font-weight:800;color:#047857">Mohammad Shahin Hossain</div>
+      <div>Surveyor, Local Government Engineering Department (LGED)</div>
+      <div style="margin-top:6px">📱 <b>01675350306</b> &nbsp;|&nbsp; ✉️ <b><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5427263b3a2d6661143339353d387a373b39">[email&#160;protected]</a></b></div>
+      <div><a href="https://shrony25.github.io/Shahin_1/" target="_blank" style="font-weight:600;color:#0d9488;">🌐 Website</a></div>
+      <div style="margin-top:10px">
+        <a class="btn btn-wa" href="https://wa.me/8801675350306?text=Salam%20Shahin%20bhai" target="_blank">WhatsApp Direct</a>
+        <a class="btn" style="background:#0ea5e9;color:#fff;margin-left:8px" href="tel:+8801675350306">📞 Call: 01675350306</a>
+        <a class="btn" style="background:#334155;color:#fff;margin-left:8px" href="/cdn-cgi/l/email-protection#bdcecfd2d3c48f88fddad0dcd4d193ded2d0">✉️ Email</a>
+      </div>
+      <div style="font-size:11px;color:#64748b;margin-top:12px">© 2025 Mohammad Shahin Hossain – All Rights Reserved<br>Evaluation Pro v1.10 Lifetime – Single-PC Commercial License – Unauthorized distribution prohibited under Bangladesh Copyright Act 2000</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container" style="text-align:center">
+    <b>Evaluation Pro v1.10 Lifetime – Shahin Edition</b><br>
+    Developed by Mohammad Shahin Hossain, Surveyor, LGED<br>
+    01675350306 • <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4e3d3c2120377c7b0e29232f2722602d2123">[email&#160;protected]</a> • <a href="https://shrony25.github.io/Shahin_1/" target="_blank">Website</a>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// simple install tracker
+document.querySelectorAll('a[download]').forEach(a=>{
+  a.addEventListener('click',()=>{console.log('Download: Evaluation Pro v1.10 by Shahin LGED - 01675350306')})
+});
+</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v4513226cdae34746b4dedf0b4dfa099e1781791509496" integrity="sha512-ZE9pZaUXND66v380QUtch/5sE9tPFh2zg45pR2PB0CVkCtOREv2AJKkSidISWkysEuQ0EH8faUU5du78bx87UQ==" data-cf-beacon='{"version":"2024.11.0","token":"1954b47c125f43f8b4338b3c4f804e4f","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
