@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin License - Evaluation Pro v1.10</title>
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;font-family:system-ui,Inter,Segoe UI,Roboto,sans-serif;background:#f0fdfa;color:#0f172a;min-height:100vh}
+.topbar{background:linear-gradient(135deg,#065f46,#0d9488);color:#fff;padding:14px 16px;text-align:center;position:sticky;top:0;z-index:100}
+.topbar h1{margin:0;font-size:16px}
+.topbar p{margin:4px 0 0;font-size:11px;opacity:.9}
+.login-wrap{max-width:380px;margin:40px auto;padding:24px 20px;background:#fff;border-radius:16px;box-shadow:0 12px 30px rgba(6,95,70,.15);border:1px solid #ccfbf1}
+.login-wrap h2{margin:0 0 6px;color:#065f46;font-size:20px;text-align:center}
+.sub{text-align:center;font-size:12px;color:#64748b;margin-bottom:18px;line-height:1.5}
+.input{width:100%;padding:16px 14px;border:2px solid #99f6e0;border-radius:12px;font-size:18px;outline:none;background:#f0fdfa;letter-spacing:1px}
+.input:focus{border-color:#0d9488;background:#fff;box-shadow:0 0 0 4px rgba(13,148,136,.15)}
+.btn{width:100%;padding:16px;border:none;border-radius:12px;font-size:16px;font-weight:800;cursor:pointer;touch-action:manipulation}
+.btn-primary{background:linear-gradient(135deg,#0d9488,#065f46);color:#fff;box-shadow:0 6px 16px rgba(13,148,136,.35)}
+.btn-primary:active{transform:scale(.97)}
+.small{font-size:11px;color:#64748b;margin-top:10px;text-align:center;line-height:1.5}
+.err{background:#fef2f2;border:1px solid #fecaca;color:#991b1b;padding:12px;border-radius:10px;font-size:13px;margin:12px 0;display:none}
+.ok{background:#ecfdf5;border:1px solid #6ee7b7;color:#065f46;padding:10px;border-radius:10px;font-size:13px;margin:12px 0;display:none}
+/* APP */
+.app-wrap{max-width:520px;margin:0 auto;padding:16px 14px 40px}
+.card{background:#fff;border-radius:16px;padding:16px;border:1px solid #ccfbf1;box-shadow:0 8px 24px rgba(0,0,0,.06);margin-bottom:14px}
+.card h3{margin:0 0 10px;font-size:14px;color:#065f46;display:flex;align-items:center;gap:6px}
+.label{font-size:12px;font-weight:700;color:#334155;margin:8px 0 6px;display:block}
+.row{display:flex;gap:8px}
+.row .input{flex:1}
+.icon-btn{padding:0 14px;border-radius:12px;border:1px solid #99f6e0;background:#ecfeff;font-size:18px;cursor:pointer;touch-action:manipulation}
+.result-box{display:none;background:linear-gradient(135deg,#ecfdf5,#f0fdfa);border:2px dashed #0d9488;border-radius:14px;padding:14px;margin-top:14px}
+.kv{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px dashed #a7f3d0;font-size:13px}
+.badge{display:inline-block;background:#065f46;color:#ecfdf5;padding:3px 8px;border-radius:20px;font-size:11px;font-weight:800}
+.key-big{font-size:22px;font-weight:900;letter-spacing:2px;color:#065f46;text-align:center;padding:12px 0;word-spacing:6px}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.actions .btn{padding:12px;font-size:13px}
+.btn-wa{background:#22c55e;color:#fff}
+.btn-copy{background:#0f172a;color:#fff}
+.btn-ghost{background:#f1f5f9;color:#334155;border:1px solid #e2e8f0}
+.history-item{display:flex;justify-content:space-between;gap:8px;padding:10px;border-bottom:1px solid #f1f5f9;font-size:12px}
+.dot{width:8px;height:8px;background:#22c55e;border-radius:50%;display:inline-block}
+.warn{background:#fffbeb;border:1px solid #fde68a;color:#92400e;padding:10px 12px;border-radius:10px;font-size:11.5px;line-height:1.6}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <h1>⚡ Evaluation Pro v1.10 – Admin License</h1>
+  <p>Mohammad Shahin Hossain | 01675350306</p>
+</div>
+
+<!-- LOGIN -->
+<div id="loginScreen">
+  <div class="login-wrap">
+    <h2>🔐 Admin Login</h2>
+    <div class="sub">শুধু আপনার জন্য। PIN দিয়ে ঢুকুন।<br>ডিফল্ট PIN: <b>01675350306</b></div>
+    <div id="loginErr" class="err"></div>
+    <div id="loginOk" class="ok"></div>
+    <form id="loginForm" onsubmit="return false;">
+      <label class="label">Admin PIN</label>
+      <input id="pinInput" class="input" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" placeholder="01675350306" autofocus>
+      <div style="margin-top:14px"><button id="loginBtn" type="button" class="btn btn-primary">লগইন করুন →</button></div>
+    </form>
+    <div class="small">সমস্যা হলে ফাইলের ভেতরে <code>ADMIN_PIN</code> চেক করুন। এই পেজে ৩ বার ভুল PIN দিলেও কোন লক হবে না।</div>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="appScreen" style="display:none">
+  <div class="app-wrap">
+    <div class="card">
+      <h3>🔑 নতুন লাইসেন্স <span style="margin-left:auto"><button onclick="doLogout()" style="background:none;border:none;color:#ef4444;font-size:11px;font-weight:800;cursor:pointer">Logout ✕</button></span></h3>
+      <label class="label">Customer Device ID</label>
+      <div class="row">
+        <input id="deviceInput" class="input" placeholder="SHAHIN-XXXX-XXXX-XXXX" spellcheck="false" style="text-transform:uppercase;font-weight:700;font-size:15px">
+        <button class="icon-btn" id="pasteBtn" type="button">📋</button>
+      </div>
+      <div style="margin-top:12px"><button id="genBtn" type="button" class="btn btn-primary">✨ License Generate</button></div>
+      <div id="resultBox" class="result-box">
+        <div style="text-align:center"><span class="badge">LIFETIME</span></div>
+        <div class="kv"><span>Device</span><b id="rDevice">-</b></div>
+        <div class="kv"><span>Expiry</span><b>NEVER</b></div>
+        <div class="key-big" id="rKey">----</div>
+        <div class="actions">
+          <button class="btn btn-copy" id="copyKeyBtn" type="button">📋 Key Copy</button>
+          <button class="btn btn-wa" id="waBtn" type="button">WhatsApp</button>
+        </div>
+        <div class="actions" style="margin-top:8px">
+          <button class="btn btn-ghost" id="copyFullBtn" type="button">Full SMS</button>
+          <button class="btn btn-ghost" id="saveHistBtn" type="button">Save History</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>📱 SMS Preview</h3>
+      <div id="smsPreview" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:12px;font-size:12.5px;white-space:pre-wrap;line-height:1.6;color:#334155">Generate করলে এখানে দেখাবে...</div>
+    </div>
+    <div class="card">
+      <h3>📜 History <span id="histCount" style="font-weight:400;font-size:11px;color:#64748b"></span>
+        <span style="margin-left:auto;display:flex;gap:6px">
+          <button id="exportBtn" type="button" style="background:#f1f5f9;border:1px solid #e2e8f0;padding:5px 10px;border-radius:8px;font-size:11px">Export CSV</button>
+          <button id="clearBtn" type="button" style="background:#fef2f2;border:1px solid #fecaca;padding:5px 10px;border-radius:8px;font-size:11px;color:#991b1b">Clear</button>
+        </span>
+      </h3>
+      <div id="histList" style="max-height:260px;overflow:auto"><div class="small">কোন হিস্ট্রি নেই।</div></div>
+    </div>
+    <div class="card"><div class="warn">GitHub এ আপলোড করলে লিংক: <code>https://shrony25.github.io/epro/admin-license-generator.html</code><br>Chrome → Add to Home Screen দিলে App হবে।</div></div>
+  </div>
+</div>
+
+<script>
+// CONFIG - পরিবর্তনযোগ্য
+var ADMIN_PIN = "01675350306";
+var SECRET_SALT = "SHAHIN_LGED_EPROCURE_PRO_V51_LIFETIME_2025_Secure!!";
+var SALT_SUFFIX = "LIFETIME_V51_SHAHIN_LGED";
+
+var lastResult = null;
+function $(id){return document.getElementById(id);}
+function showErr(m){ var e=$('loginErr'); e.style.display='block'; e.textContent=m; $('loginOk').style.display='none'; }
+function showOk(m){ var e=$('loginOk'); e.style.display='block'; e.textContent=m; $('loginErr').style.display='none'; }
+function hideMsg(){ $('loginErr').style.display='none'; $('loginOk').style.display='none'; }
+
+function doLogin(){
+  try{
+    var v = $('pinInput').value.trim();
+    if(!v){ showErr("PIN লিখুন"); return; }
+    if(v === ADMIN_PIN){
+      showOk("সঠিক PIN! ঢুকছি...");
+      try{ localStorage.setItem('epro_admin_auth','1'); }catch(e){}
+      setTimeout(function(){ showApp(); }, 200);
+    }else{
+      showErr("ভুল PIN! সঠিক PIN: "+ADMIN_PIN);
+    }
+  }catch(e){
+    showErr("Error: "+e.message+" - তবুও ঢুকছি...");
+    showApp();
+  }
+}
+function doLogout(){ try{ localStorage.removeItem('epro_admin_auth'); }catch(e){} location.reload(); }
+
+function showApp(){
+  $('loginScreen').style.display='none';
+  $('appScreen').style.display='block';
+  loadHist();
+}
+function checkAuth(){
+  try{
+    if(localStorage.getItem('epro_admin_auth')==='1'){ showApp(); }
+  }catch(e){}
+}
+
+async function sha256Hex(str){
+  var enc = new TextEncoder().encode(str);
+  var buf = await crypto.subtle.digest('SHA-256', enc);
+  return Array.from(new Uint8Array(buf)).map(function(b){return b.toString(16).padStart(2,'0');}).join('');
+}
+function formatKey(hex){
+  return (hex.substring(2,6)+"-"+hex.substring(10,14)+"-"+hex.substring(18,22)+"-"+hex.substring(26,30)).toUpperCase();
+}
+
+async function generateNow(){
+  var deviceId = $('deviceInput').value.trim().toUpperCase();
+  if(!deviceId){ alert("Device ID দিন"); return; }
+  if(deviceId.indexOf("SHAHIN-")!==0){ alert("Device ID MUST start with SHAHIN-\nEx: SHAHIN-A1B2-C3D4-E5F6"); return; }
+  if(deviceId.length < 15){ alert("Device ID অসম্পূর্ণ"); return; }
+  var raw = deviceId + '|' + SECRET_SALT + '|' + SALT_SUFFIX;
+  try{
+    var hex = await sha256Hex(raw);
+    var key = formatKey(hex);
+    lastResult = {deviceId: deviceId, key: key, date: new Date().toISOString().split('T')[0]};
+    $('rDevice').textContent = deviceId;
+    $('rKey').textContent = key;
+    $('resultBox').style.display='block';
+    $('smsPreview').textContent = makeSMS(deviceId, key);
+    autoSaveHist(deviceId, key);
+    if(navigator.vibrate) navigator.vibrate(50);
+  }catch(e){ alert("Generate Error: "+e.message); }
+}
+function makeSMS(d,k){
+  return "আসসালামু আলাইকুম,\nআপনার Evaluation Pro v1.10 Lifetime License:\n\nDevice: "+d+"\nKey: "+k+"\n\n→ License box এ paste করে \"Activate Lifetime License\" চাপুন।\n\nধন্যবাদ\nMohammad Shahin Hossain\n01675350306\nhttps://shrony25.github.io/epro/";
+}
+function copyKey(){ if(!lastResult) return; navigator.clipboard.writeText(lastResult.key).then(function(){toast("Key Copy হয়েছে!");}); }
+function copyFullMsg(){ if(!lastResult) return; navigator.clipboard.writeText(makeSMS(lastResult.deviceId,lastResult.key)).then(function(){toast("SMS Copy হয়েছে!");}); }
+function shareWA(){ if(!lastResult) return; var txt=makeSMS(lastResult.deviceId,lastResult.key); window.open("https://wa.me/?text="+encodeURIComponent(txt),"_blank"); }
+async function pasteClipboard(){
+  try{ var t=await navigator.clipboard.readText(); if(t) $('deviceInput').value=t.trim().toUpperCase(); }
+  catch(e){ $('deviceInput').focus(); document.execCommand('paste'); }
+}
+function toast(m){
+  var d=document.createElement('div'); d.textContent=m;
+  d.style.cssText='position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#0f172a;color:#fff;padding:10px 16px;border-radius:20px;font-size:13px;z-index:9999';
+  document.body.appendChild(d); setTimeout(function(){d.remove();},1800);
+}
+function autoSaveHist(deviceId,key){
+  try{
+    var hist=JSON.parse(localStorage.getItem('epro_hist')||'[]');
+    hist=hist.filter(function(h){return h.deviceId!==deviceId;});
+    hist.unshift({deviceId:deviceId,key:key,date:new Date().toISOString().split('T')[0],ts:Date.now()});
+    hist=hist.slice(0,100);
+    localStorage.setItem('epro_hist',JSON.stringify(hist));
+    loadHist();
+  }catch(e){}
+}
+function loadHist(){
+  try{
+    var hist=JSON.parse(localStorage.getItem('epro_hist')||'[]');
+    $('histCount').textContent="("+hist.length+")";
+    if(!hist.length){ $('histList').innerHTML='<div class="small">কোন হিস্ট্রি নেই।</div>'; return; }
+    $('histList').innerHTML=hist.map(function(h){
+      return '<div class="history-item"><div><span class="dot"></span> <b>'+h.deviceId+'</b><br><span style="color:#065f46;font-weight:800">'+h.key+'</span> • '+h.date+'</div><div style="display:flex;flex-direction:column;gap:4px"><button onclick="reuseHist(\''+h.deviceId+'\',\''+h.key+'\')" style="padding:4px 8px;border-radius:8px;border:1px solid #99f6e0;background:#ecfeff;font-size:11px">Use</button><button onclick="copyHistKey(\''+h.key+'\')" style="padding:4px 8px;border-radius:8px;border:1px solid #e2e8f0;background:#fff;font-size:11px">Copy</button></div></div>';
+    }).join('');
+  }catch(e){}
+}
+function reuseHist(d,k){
+  $('deviceInput').value=d; lastResult={deviceId:d,key:k};
+  $('rDevice').textContent=d; $('rKey').textContent=k;
+  $('resultBox').style.display='block'; $('smsPreview').textContent=makeSMS(d,k);
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function copyHistKey(k){ navigator.clipboard.writeText(k).then(function(){toast("Copy: "+k);}); }
+function clearHist(){ if(confirm("History মুছবেন?")){ try{localStorage.removeItem('epro_hist');}catch(e){} loadHist(); } }
+function exportCSV(){
+  try{
+    var hist=JSON.parse(localStorage.getItem('epro_hist')||'[]');
+    if(!hist.length){ alert("History খালি"); return; }
+    var csv="SL,Date,Device ID,License Key\n"; hist.slice().reverse().forEach(function(h,i){csv+=(i+1)+","+h.date+","+h.deviceId+","+h.key+"\n";});
+    var blob=new Blob([csv],{type:'text/csv'}); var url=URL.createObjectURL(blob);
+    var a=document.createElement('a'); a.href=url; a.download='license-history-'+new Date().toISOString().split('T')[0]+'.csv'; a.click(); URL.revokeObjectURL(url);
+  }catch(e){ alert(e.message); }
+}
+
+// Bind events robustly
+document.addEventListener('DOMContentLoaded', function(){
+  checkAuth();
+  var loginBtn=$('loginBtn');
+  if(loginBtn){
+    loginBtn.addEventListener('click', doLogin);
+    loginBtn.addEventListener('touchend', function(e){ e.preventDefault(); doLogin(); });
+  }
+  $('pinInput').addEventListener('keydown', function(e){ if(e.key==='Enter'){ e.preventDefault(); doLogin(); } });
+  $('genBtn').addEventListener('click', generateNow);
+  $('pasteBtn').addEventListener('click', pasteClipboard);
+  $('copyKeyBtn').addEventListener('click', copyKey);
+  $('copyFullBtn').addEventListener('click', copyFullMsg);
+  $('waBtn').addEventListener('click', shareWA);
+  $('saveHistBtn').addEventListener('click', function(){ if(lastResult){autoSaveHist(lastResult.deviceId,lastResult.key); toast("Save হলো");} });
+  $('exportBtn').addEventListener('click', exportCSV);
+  $('clearBtn').addEventListener('click', clearHist);
+});
+window.doLogin=doLogin; window.doLogout=doLogout; window.generateNow=generateNow;
+window.reuseHist=reuseHist; window.copyHistKey=copyHistKey;
+</script>
+</body>
+</html>
