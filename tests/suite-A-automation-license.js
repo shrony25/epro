@@ -54,7 +54,7 @@ function run(html, storage) {
     w.GM_setValue = (k, v) => w.localStorage.setItem(k, JSON.stringify(v));
     w.GM_getValue = (k, d) => { const v = w.localStorage.getItem(k); return v === null ? d : JSON.parse(v); };
     w.GM_registerMenuCommand = () => {};
-    w.GM_xmlhttpRequest = () => {};
+    w.GM_xmlhttpRequest = (options) => { if (options && typeof options.onerror === 'function') options.onerror({}); };
     try { w.crypto.subtle = crypto.webcrypto.subtle; } catch (e) {}
     try {
         Object.defineProperty(w.HTMLElement.prototype, 'innerText', { get() { return this.textContent; }, set(v) { this.textContent = v; }, configurable: true });

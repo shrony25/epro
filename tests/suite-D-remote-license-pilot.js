@@ -10,10 +10,7 @@ const crypto = require('crypto');
 
 const SOURCE_PATH = process.argv[2] || '/home/user/Evaluation-Pro-v1.16-Pilot-Master-Source.user.js';
 const SOURCE = fs.readFileSync(SOURCE_PATH, 'utf8');
-const CODE = SOURCE.replace(
-    'PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE',
-    'https://script.google.com/macros/s/pilot-test/exec'
-);
+const CODE = SOURCE;
 const SALT = 'SHAHIN_LGED_EPROCURE_PRO_V51_LIFETIME_2025_Secure!!';
 const SUFFIX = 'LIFETIME_V51_SHAHIN_LGED';
 const PREFIX = 'epro_shahin_v51_';

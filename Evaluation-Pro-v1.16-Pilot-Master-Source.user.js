@@ -13,8 +13,8 @@
 // @grant        GM_registerMenuCommand
 // @connect      script.google.com
 // @run-at       document-idle
-// @updateURL    https://shrony25.github.io/epro/pilot/evaluation-pro.meta.js
-// @downloadURL  https://shrony25.github.io/epro/pilot/evaluation-pro.user.js
+// @updateURL    https://raw.githubusercontent.com/shrony25/epro/arena/cc164b26-epro/pilot/evaluation-pro.meta.js
+// @downloadURL  https://raw.githubusercontent.com/shrony25/epro/arena/cc164b26-epro/pilot/evaluation-pro.user.js
 // @supportURL   mailto:srony25@gmail.com
 // ==/UserScript==
 
@@ -65,7 +65,7 @@
         CREDIT_PHONE: "01675350306",
         CREDIT_WEBSITE: "https://shrony25.github.io/Shahin_1/",
         // Google Apps Script Web App URL for the pilot. Replace the placeholder after deployment.
-        LICENSE_SERVER: "PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE",
+        LICENSE_SERVER: "https://script.google.com/macros/s/pilot-placeholder/exec", // Replace with the deployed /exec URL
         REMOTE_CHECK_INTERVAL_MS: 24 * 60 * 60 * 1000,
         
         SECRET_SALT: "SHAHIN_LGED_EPROCURE_PRO_V51_LIFETIME_2025_Secure!!",

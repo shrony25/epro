@@ -21,7 +21,7 @@ function run(html, storage, hw) {
     w.GM_setValue = (k, v) => w.localStorage.setItem(k, JSON.stringify(v));
     w.GM_getValue = (k, d) => { const v = w.localStorage.getItem(k); return v === null ? d : JSON.parse(v); };
     w.GM_registerMenuCommand = () => {};
-    w.GM_xmlhttpRequest = () => {};
+    w.GM_xmlhttpRequest = (options) => { if (options && typeof options.onerror === 'function') options.onerror({}); };
     const alerts = []; w.alert = (m) => alerts.push(String(m)); w.confirm = () => true;
     try { w.crypto.subtle = crypto.webcrypto.subtle; } catch (e) {}
     try {

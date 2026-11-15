@@ -13,7 +13,7 @@
 // @grant        GM_registerMenuCommand
 // @connect      script.google.com
 // @run-at       document-idle
-// @updateURL    https://shrony25.github.io/epro/pilot/evaluation-pro.meta.js
-// @downloadURL  https://shrony25.github.io/epro/pilot/evaluation-pro.user.js
+// @updateURL    https://raw.githubusercontent.com/shrony25/epro/arena/cc164b26-epro/pilot/evaluation-pro.meta.js
+// @downloadURL  https://raw.githubusercontent.com/shrony25/epro/arena/cc164b26-epro/pilot/evaluation-pro.user.js
 // @supportURL   mailto:srony25@gmail.com
 // ==/UserScript==
