@@ -1,5 +1,5 @@
 /*
- * Evaluation Pro pilot license status API.
+ * Evaluation Pro license status API.
  *
  * Deploy this file as a Google Apps Script Web App that executes as the owner.
  * The linked Google Sheet remains private; this endpoint returns only the

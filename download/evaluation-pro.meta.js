@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Evaluation Pro
 // @namespace    shahin.lged.eprocure.pro
-// @version      1.15
+// @version      1.16
 // @description  Auto Evaluation + Clarification + JV Control + Finalize Responsiveness - Licensed Lifetime Edition by Mohammad Shahin Hossain, LGED
 // @author       Mohammad Shahin Hossain
 // @copyright    2025 Mohammad Shahin Hossain, Surveyor, LGED. All Rights Reserved.
@@ -11,7 +11,7 @@
 // @grant        GM_setValue
 // @grant        GM_getValue
 // @grant        GM_registerMenuCommand
-// @connect      shrony25.github.io
+// @connect      script.google.com
 // @run-at       document-idle
 // @updateURL    https://shrony25.github.io/epro/evaluation-pro.meta.js
 // @downloadURL  https://shrony25.github.io/epro/evaluation-pro.user.js

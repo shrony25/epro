@@ -13,8 +13,8 @@
 // @grant        GM_registerMenuCommand
 // @connect      script.google.com
 // @run-at       document-idle
-// @updateURL    https://raw.githubusercontent.com/shrony25/epro/arena/cc164b26-epro/pilot/evaluation-pro.meta.js
-// @downloadURL  https://raw.githubusercontent.com/shrony25/epro/arena/cc164b26-epro/pilot/evaluation-pro.user.js
+// @updateURL    https://shrony25.github.io/epro/evaluation-pro.meta.js
+// @downloadURL  https://shrony25.github.io/epro/evaluation-pro.user.js
 // @supportURL   mailto:srony25@gmail.com
 // ==/UserScript==
 
@@ -29,7 +29,7 @@
  * 
  * PRODUCT     : Evaluation Pro
  * VERSION     : 1.16
- * BUILD       : 2026-11-01-SHAHIN-v116-PILOT
+ * BUILD       : 2026-11-01-SHAHIN-v116
  * REMOTE LICENSE: daily status check via Google Apps Script; local lifetime license is allowed during server outage.
  *
  * LICENSE     : COMMERCIAL LIFETIME - SINGLE DEVICE
@@ -64,7 +64,7 @@
         CREDIT_EMAIL: "srony25@gmail.com",
         CREDIT_PHONE: "01675350306",
         CREDIT_WEBSITE: "https://shrony25.github.io/Shahin_1/",
-        // Google Apps Script Web App URL for the pilot. Replace the placeholder after deployment.
+        // Google Apps Script Web App URL for remote license status.
         LICENSE_SERVER: "https://script.google.com/macros/s/AKfycbydsWTITxhijav6xqRfVpQhbcNlMKt4wJkrtjMs5xEcnC6fGWzQIHO2jnLdTXeB524GZQ/exec",
         REMOTE_CHECK_INTERVAL_MS: 24 * 60 * 60 * 1000,
         
@@ -72,7 +72,7 @@
         
         PRODUCT_NAME: "Evaluation Pro",
         VERSION: "1.16",
-        BUILD: "20261101-SHAHIN-v116-PILOT",
+        BUILD: "20261101-SHAHIN-v116",
         AUTHOR: "Mohammad Shahin Hossain - LGED",
         
         REASON_TEXT: "Accepted",
@@ -390,7 +390,7 @@
                 }
                 throw new Error('Unknown license status');
             } catch (e) {
-                // Pilot policy: a server outage does not interrupt an otherwise valid local lifetime license.
+                // Offline policy: a server outage does not interrupt an otherwise valid local lifetime license.
                 // A confirmed remote revoke remains blocking until a later successful check restores it.
                 SecureStore.set('remote_license_last_error', String(e && e.message || e));
                 if (cachedStatus === 'revoked') {
