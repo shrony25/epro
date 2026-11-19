@@ -331,6 +331,8 @@ If the owner later requests a public v1.17 release, first confirm that the reque
 - Google Doc copy (persistent, synchronized): https://docs.google.com/document/d/1Va1Ue2tZjONCl7m7gZY7BDEqgpkb8kLVK4ruISQMuXk/edit
   - Document ID: `1Va1Ue2tZjONCl7m7gZY7BDEqgpkb8kLVK4ruISQMuXk`
   - Title: **Evaluation Pro — Master AI Project Context and Change Prompt**
+  - Drive folder: https://drive.google.com/drive/folders/1BV7p8tPfwd6HDzRUs5uhCNGQTK8683Jr
+  - Drive folder ID: `1BV7p8tPfwd6HDzRUs5uhCNGQTK8683Jr`
   - Keep this Google Doc synchronized with the GitHub file and append dated change entries; do not delete earlier history.
 
 ---
