@@ -351,6 +351,13 @@ If the owner later requests a public v1.17 release, first confirm that the reque
 - Committed/pushed the corrected artifact on `arena/fba65677-epro`; public root/download/Pages/Sheet/title remain v1.16.
 - Created this master AI context prompt for future chats and future incremental updates.
 
+### 2026-11-01 — persistent Google Doc and Drive folder registered
+
+- Created the Google Doc `Evaluation Pro — Master AI Project Context and Change Prompt` and populated it with the project context, compatibility rules, release gate, implementation history, and validation results.
+- Created the Drive folder `Evaluation Pro Project Context` and moved the Google Doc into it.
+- Recorded the Google Doc URL/ID and Drive folder URL/ID in this GitHub file.
+- Public v1.17 release remains blocked; no public root/download/Pages/Sheet/title update was performed.
+
 ### Future entries
 
 For every later change, append a dated entry here containing:
