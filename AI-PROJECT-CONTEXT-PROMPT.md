@@ -315,8 +315,10 @@ For every future change:
 8. Test the visible UI label and relevant user-facing behavior, not just a string search in an obfuscated build.
 9. Update this prompt's current-state section and changelog with the date, exact files, behavior, test totals, commit, and whether public release remains blocked.
 10. Update the persistent Google Doc copy of this prompt if one exists, keeping the GitHub file and Google Doc synchronized.
-11. Commit and push only to `arena/fba65677-epro`.
-12. Report the result in simple Bengali and clearly distinguish local test delivery from public release.
+11. Update `DRIVE-SYNC-MANIFEST.md` with every Drive upload/replacement, including file path, version/status, Drive ID/link, checksum, and date.
+12. Update the corresponding private Drive file when an accepted/final file changes; do not create ambiguous duplicate copies unless preserving an intentional rollback version.
+13. Commit and push only to `arena/fba65677-epro`.
+14. Report the result in simple Bengali and clearly distinguish local test delivery from public release.
 
 If the owner later requests a public v1.17 release, first confirm that the request is explicit. Then make a release checklist covering the readable source, obfuscated root/download script, both metadata files, `index.html` labels/links, Pages deployment, the private license Sheet/server compatibility, and rollback/safety verification. Do not update any of those merely because a test passed.
 
@@ -328,6 +330,11 @@ If the owner later requests a public v1.17 release, first confirm that the reque
   `https://github.com/shrony25/epro/blob/arena/fba65677-epro/AI-PROJECT-CONTEXT-PROMPT.md`
 - Corrected v1.17 personal test artifact:
   `https://github.com/shrony25/epro/raw/refs/heads/arena/fba65677-epro/Evaluation-Pro-v1.17-Test.user.js`
+- Drive file manifest (all software-related files and synchronization rules):
+  `https://github.com/shrony25/epro/blob/arena/fba65677-epro/DRIVE-SYNC-MANIFEST.md`
+- Drive manifest copy:
+  `https://drive.google.com/file/d/1w-wJVS724KpzYYphz08-SzHI-awYdKWC/view?usp=drivesdk`
+  - Drive file ID: `1w-wJVS724KpzYYphz08-SzHI-awYdKWC`
 - Google Doc copy (persistent, synchronized): https://docs.google.com/document/d/1Va1Ue2tZjONCl7m7gZY7BDEqgpkb8kLVK4ruISQMuXk/edit
   - Document ID: `1Va1Ue2tZjONCl7m7gZY7BDEqgpkb8kLVK4ruISQMuXk`
   - Title: **Evaluation Pro — Master AI Project Context and Change Prompt**
@@ -357,6 +364,13 @@ If the owner later requests a public v1.17 release, first confirm that the reque
 - Created the Drive folder `Evaluation Pro Project Context` and moved the Google Doc into it.
 - Recorded the Google Doc URL/ID and Drive folder URL/ID in this GitHub file.
 - Public v1.17 release remains blocked; no public root/download/Pages/Sheet/title update was performed.
+
+### 2026-11-01 — complete software archive added to Google Drive
+
+- Created a structured private Drive archive under `Evaluation Pro Project Context`.
+- Added protected public v1.16 root/download scripts and metadata, readable v1.13/v1.15/v1.16 sources, the corrected v1.17 personal test build, all four validation suites, license-server files, README/site/admin/sales files, and the user manual PDF.
+- Added `DRIVE-SYNC-MANIFEST.md` with Drive IDs, links, checksums, version/status boundaries, and future synchronization rules.
+- The Drive archive is private working storage and backup only; it does not authorize a public v1.17 release.
 
 ### Future entries
 
